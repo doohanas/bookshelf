@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Show Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="darkMode.css" />
+  </head>
+
+  <body>
+    <header class="head_bar">
+      <svg class="img_bar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#11698e"
+          fill-opacity="1"
+          d="M0,256L30,234.7C60,213,120,171,180,165.3C240,160,300,192,360,186.7C420,181,480,139,540,154.7C600,171,660,245,720,240C780,235,840,149,900,144C960,139,1020,213,1080,213.3C1140,213,1200,139,1260,133.3C1320,128,1380,192,1410,224L1440,256L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+        ></path>
+        <text fill="#ffffff" font-size="36" font-family="Verdana" x="600" y="100">BOOKSHELF</text>
+      </svg>
+    </header>
+
+    <label id="toggleMode">
+      <input type="checkbox" name="" id="box" />
+      <span class="check"></span>
+      <span class="textNightMode">NIGHT MODE</span>
+    </label>
+
+    <main>
+      <section class="greeting_section">
+        <h1>WELCOME TO MY BOOKSHELF</h1>
+        <iframe src="https://giphy.com/embed/l2SpXaJA67JaSqSxq" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+      </section>
+
+      <section class="input_section">
+        <button id="button" class="btn message">Input New</button>
+
+        <form id="inputBook">
+          <h2>Input New Book</h2>
+          <div class="input">
+            <label for="inputBookTitle">Title</label>
+            <input id="inputBookTitle" type="text" required />
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Author</label>
+            <input id="inputBookAuthor" type="text" required />
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Year</label>
+            <input id="inputBookYear" type="number" required />
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Finished</label>
+            <input id="inputBookIsComplete" type="checkbox" />
+          </div>
+          <button id="bookSubmit" type="submit">Insert Book</button>
+        </form>
+      </section>
+
+      <section class="search_section">
+        <button id="button2" class="btn message">Search Book</button>
+        <form id="searchBook">
+          <h2>Search Book</h2>
+          <label for="searchBookTitle">Title</label>
+          <input id="searchBookTitle" type="text" placeholder="Type to Search Book Title" />
+          <button id="searchSubmit" type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="book_shelf">
+        <button id="button3" class="btn message">Incomplete Books</button>
+        <div id="incompleteBookshelfList" class="book_list"></div>
+      </section>
+
+      <section class="book_shelf">
+        <button id="button4" class="btn message">Complete Books</button>
+        <div id="completeBookshelfList" class="book_list"></div>
+      </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

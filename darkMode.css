@@ -1,0 +1,37 @@
+#toggleMode > label {
+  display: flex;
+  flex-direction: column;
+}
+
+#toggleMode > .textNightMode {
+  margin-left: 10px;
+  font-size: 0.85em;
+}
+
+#toggleMode {
+  padding-right: 50px;
+}
+
+#toggleMode > input[type="checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.check {
+  position: static;
+  display: block;
+  width: 40px;
+  height: 20px;
+  margin-left: 35px;
+  background: #25252a;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in-out 0.7s;
+}
+
+input[type="checkbox"]:checked ~ .check {
+  background-color: #fff;
+  box-shadow: 0 0 0 9000px #25252a;
+}
